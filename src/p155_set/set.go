@@ -126,3 +126,10 @@ func (set *HashSet) IsSuperset(other *HashSet) bool {
 
 	return true
 }
+
+// 返回一个 HashSet 对象指针
+func NewHashSet() *HashSet {
+	return &HashSet{
+		m: make(map[interface{}]bool),
+	}
+}
